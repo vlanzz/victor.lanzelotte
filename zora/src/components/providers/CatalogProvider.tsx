@@ -15,6 +15,8 @@ interface CatalogContextValue {
   refresh: () => Promise<void>;
   /** true se a leitura do catálogo falhou (a interface mostra o estado de erro). */
   error: boolean;
+  /** true depois da primeira leitura do repositório (inclui o que o admin alterou). */
+  ready: boolean;
 }
 
 const CatalogContext = createContext<CatalogContextValue | null>(null);
@@ -27,6 +29,7 @@ export function CatalogProvider({ children }: { children: React.ReactNode }) {
   const [snapshot, setSnapshot] = useState<CatalogSnapshot>(seedSnapshot);
   const [coupons, setCoupons] = useState<Coupon[]>([]);
   const [error, setError] = useState(false);
+  const [ready, setReady] = useState(false);
 
   const refresh = useCallback(async () => {
     try {
@@ -34,6 +37,7 @@ export function CatalogProvider({ children }: { children: React.ReactNode }) {
       setSnapshot(s);
       setCoupons(c);
       setError(false);
+      setReady(true);
     } catch {
       setError(true);
     }
@@ -45,6 +49,7 @@ export function CatalogProvider({ children }: { children: React.ReactNode }) {
       if (!alive) return;
       setSnapshot(s);
       setCoupons(c);
+      setReady(true);
     }).catch(() => alive && setError(true));
     return () => { alive = false; };
   }, []);
@@ -53,8 +58,8 @@ export function CatalogProvider({ children }: { children: React.ReactNode }) {
     const entries = buildEntries(snapshot);
     const slugs = new Map(entries.map((e) => [e.item.slug, e]));
     const ids = new Map(entries.map((e) => [e.item.id, e]));
-    return { snapshot, entries, coupons, bySlug: (s) => slugs.get(s), byId: (i) => ids.get(i), refresh, error };
-  }, [snapshot, coupons, refresh, error]);
+    return { snapshot, entries, coupons, bySlug: (s) => slugs.get(s), byId: (i) => ids.get(i), refresh, error, ready };
+  }, [snapshot, coupons, refresh, error, ready]);
 
   return <CatalogContext.Provider value={value}>{children}</CatalogContext.Provider>;
 }
