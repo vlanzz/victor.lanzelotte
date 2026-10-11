@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "title": "Zora — illustrations that wake up your day",
+    "description": "Mugs, posters, notebooks and more, with original Zora illustrations. Made on demand."
+  },
+  "common": {
+    "close": "Close",
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Continue",
+    "yes": "Yes",
+    "no": "No",
+    "from": "from",
+    "all": "All",
+    "skipToContent": "Skip to content",
+    "currencyBRL": "Real (R$)",
+    "currencyUSD": "Dollar (US$)",
+    "language": "Language",
+    "currency": "Currency",
+    "demoNotice": "Prototype with fictional data. No purchase is real."
+  },
+  "nav": {
+    "explore": "Explore",
+    "categories": "Categories",
+    "niches": "Collections",
+    "allProducts": "All products",
+    "howItWorks": "How it works",
+    "about": "About Zora",
+    "menu": "Menu",
+    "main": "Main",
+    "breadcrumbs": "You are here",
+    "home": "Home",
+    "search": "Search",
+    "wishlist": "Wishlist",
+    "account": "My account",
+    "cart": "Cart",
+    "login": "Sign in",
+    "newArrivals": "New arrivals",
+    "bestsellers": "Highlights"
+  },
+  "header": {
+    "freeShipping": "Free shipping on orders over {amount}",
+    "searchPlaceholder": "Search for mug, cat, poster…",
+    "searchLabel": "Search products",
+    "suggestions": "Search suggestions",
+    "seeAll": "See all results for “{q}”",
+    "cartItems": "{count, plural, =0 {Cart is empty} one {Cart: 1 item} other {Cart: # items}}",
+    "wishlistItems": "{count, plural, =0 {Wishlist} one {Wishlist: 1 item} other {Wishlist: # items}}",
+    "preferences": "Language and currency",
+    "openMenu": "Open menu",
+    "inCategory": "in {name}",
+    "collection": "Collection",
+    "category": "Category",
+    "product": "Product"
+  },
+  "footer": {
+    "tagline": "Original illustrations applied to everyday things. Made on demand, just for you.",
+    "shop": "Shop",
+    "help": "Help",
+    "company": "Zora",
+    "shipping": "Shipping & delivery",
+    "returns": "Returns & exchanges",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "terms": "Terms of use",
+    "privacy": "Privacy",
+    "rights": "© {year} Zora. All rights reserved.",
+    "admin": "Admin panel"
+  },
+  "errors": {
+    "notFoundTitle": "This page hasn’t dawned yet",
+    "notFoundText": "We couldn’t find what you were looking for. How about heading home and exploring the collections?",
+    "goHome": "Back to home",
+    "genericTitle": "Oops, something went wrong",
+    "genericText": "We stumbled a bit. Try again; if it keeps happening, get in touch."
+  }
+}
