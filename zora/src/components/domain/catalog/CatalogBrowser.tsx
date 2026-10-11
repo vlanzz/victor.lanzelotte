@@ -8,12 +8,14 @@ import { activeFilterCount, PER_PAGE, parseBrowse, serializeBrowse, type BrowseS
 import { filterEntries, paginate, searchEntries, sortEntries, type Filters, type SortKey } from '@/domain/catalog';
 import type { CategoryId } from '@/domain/types';
 import { useL10n } from '@/hooks/useL10n';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { useMoney } from '@/hooks/useMoney';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { Button } from '@/components/ui/Button';
 import { EmptyState } from '@/components/ui/EmptyState';
 import { Modal } from '@/components/ui/Modal';
 import { Pagination } from '@/components/ui/Pagination';
+import { ProgressiveList } from '@/components/ui/ProgressiveList';
 import { useCatalog } from '@/components/providers/CatalogProvider';
 import { ProductCard } from '../product/ProductCard';
 import { FilterPanel } from './FilterPanel';
@@ -33,6 +35,7 @@ export function CatalogBrowser({ fixed = {} }: Props) {
   const { entries, snapshot, error, refresh } = useCatalog();
   const { currency } = useMoney();
   const [drawer, setDrawer] = useState(false);
+  const desktop = useMediaQuery('(min-width: 1024px)');
 
   const state = useMemo<BrowseState>(() => {
     const s = parseBrowse(params);
@@ -87,7 +90,7 @@ export function CatalogBrowser({ fixed = {} }: Props) {
   return (
     <div className="grid gap-8 lg:grid-cols-[17rem_1fr]">
       <aside className="hidden lg:block" aria-label={t('filters')}>
-        <div className="sticky top-32 max-h-[calc(100dvh-9rem)] overflow-y-auto pr-3">{panel}</div>
+        <div className="sticky top-32 max-h-[calc(100dvh-9rem)] overflow-y-auto pr-3">{desktop ? panel : null}</div>
       </aside>
 
       <div>
@@ -121,12 +124,13 @@ export function CatalogBrowser({ fixed = {} }: Props) {
           </ul>
         )}
 
+        <h2 className="sr-only">{t('allProducts')}</h2>
         {pageData.total === 0 ? (
           <EmptyState icon={<SearchX aria-hidden size={30} />} title={t('empty.title')} text={f.query ? t('empty.withQuery', { q: f.query }) : t('empty.text')} action={count > 0 || f.query ? <Button onClick={clearAll}>{t('clearAll')}</Button> : undefined} />
         ) : (
           <>
             <ul className="grid grid-cols-2 gap-x-3 gap-y-8 sm:gap-x-5 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4">
-              {pageData.items.map((e, i) => <li key={e.item.id}><ProductCard entry={e} priority={i < 4} /></li>)}
+              <ProgressiveList key={`${pageData.page}-${state.sort}-${pageData.total}`} items={pageData.items} render={(e, i) => <li key={e.item.id}><ProductCard entry={e} priority={i < 4} /></li>} />
             </ul>
             <div className="mt-12">
               <Pagination page={pageData.page} pages={pageData.pages} onChange={(p) => { push({ ...state, page: p }); window.scrollTo({ top: 0, behavior: 'smooth' }); }} labels={{ nav: t('pagination.nav'), prev: t('pagination.prev'), next: t('pagination.next'), page: (n) => t('pagination.page', { n }) }} />

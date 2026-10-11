@@ -21,6 +21,8 @@ export function ProductCard({ entry, priority }: { entry: CatalogEntry; priority
   const { product, type, art, item } = entry;
   const colorAxis = product.options.find((o) => o.kind === 'color');
   const [color, setColor] = useState<string | null>(null);
+  // a vista "em cena" só é desenhada quando o cartão recebe mouse/foco (metade do DOM por cartão)
+  const [peek, setPeek] = useState(false);
   const selection = resolveSelection(product, colorAxis && color ? { [colorAxis.id]: color } : {});
   const name = l(entry.name);
   const niche = snapshot.niches.find((n) => n.id === art.nicheIds[0]);
@@ -28,12 +30,12 @@ export function ProductCard({ entry, priority }: { entry: CatalogEntry; priority
   void priority;
 
   return (
-    <article className="group relative flex flex-col">
+    <article className="group relative flex flex-col" onMouseEnter={() => setPeek(true)} onFocus={() => setPeek(true)}>
       <div className="relative overflow-hidden rounded-lg bg-paper-2 shadow-soft transition duration-300 group-hover:shadow-lift">
         <Link href={`/p/${item.slug}`} aria-label={name} className="block">
           <div className="relative aspect-square">
             <Mockup type={type} product={product} selection={selection} art={art} label={label} className="absolute inset-0 size-full" />
-            <Mockup type={type} product={product} selection={selection} art={art} view="scene" {...(niche ? { accent: niche.color } : {})} label="" className="absolute inset-0 size-full opacity-0 transition-opacity duration-300 group-focus-within:opacity-100 group-hover:opacity-100" />
+            {peek && <Mockup type={type} product={product} selection={selection} art={art} view="scene" {...(niche ? { accent: niche.color } : {})} label="" className="absolute inset-0 size-full opacity-0 transition-opacity duration-300 group-focus-within:opacity-100 group-hover:opacity-100" />}
           </div>
         </Link>
         <div className="pointer-events-none absolute top-3 left-3 flex gap-1.5">
@@ -61,10 +63,12 @@ export function ProductCard({ entry, priority }: { entry: CatalogEntry; priority
           <span className="font-bold">{format(fromPrice(product, currency))}</span>
         </p>
         {colorAxis && colorAxis.values.length > 1 && (
-          <ul aria-label={t('colors')} className="relative z-10 mt-1 flex items-center gap-1.5">
+          <ul aria-label={t('colors')} className="relative z-10 mt-0.5 flex flex-wrap items-center">
             {colorAxis.values.slice(0, 6).map((v) => (
               <li key={v.id}>
-                <button type="button" aria-label={l(v.label)} aria-pressed={selection[colorAxis.id] === v.id} onMouseEnter={() => setColor(v.id)} onFocus={() => setColor(v.id)} onClick={() => setColor(v.id)} className="size-4 rounded-full border border-ink/25 transition hover:scale-125 aria-pressed:ring-2 aria-pressed:ring-ink aria-pressed:ring-offset-1" style={{ background: v.swatch }} />
+                <button type="button" aria-label={l(v.label)} aria-pressed={selection[colorAxis.id] === v.id} onMouseEnter={() => setColor(v.id)} onFocus={() => setColor(v.id)} onClick={() => setColor(v.id)} className="group/sw grid size-6 place-items-center rounded-full">
+                  <span aria-hidden className="size-4 rounded-full border border-ink/25 transition group-hover/sw:scale-125 group-aria-pressed/sw:ring-2 group-aria-pressed/sw:ring-ink group-aria-pressed/sw:ring-offset-1" style={{ background: v.swatch }} />
+                </button>
               </li>
             ))}
             {colorAxis.values.length > 6 && <li className="text-xs text-ink-soft">+{colorAxis.values.length - 6}</li>}

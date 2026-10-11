@@ -1,6 +1,7 @@
 'use client';
 import { useMemo } from 'react';
 import { useCatalog } from '@/components/providers/CatalogProvider';
+import { ProgressiveList } from '@/components/ui/ProgressiveList';
 import { ProductCard } from '@/components/domain/product/ProductCard';
 
 /** Prateleira de produtos da home (destaques ou lançamentos). */
@@ -15,7 +16,7 @@ export function ProductShelf({ kind, limit = 8 }: { kind: 'featured' | 'new'; li
   }, [entries, kind, limit]);
   return (
     <ul className="grid grid-cols-2 gap-x-3 gap-y-8 sm:gap-x-5 md:grid-cols-4">
-      {list.map((e) => <li key={e.item.id}><ProductCard entry={e} /></li>)}
+      <ProgressiveList items={list} first={4} render={(e) => <li key={e.item.id}><ProductCard entry={e} /></li>} />
     </ul>
   );
 }

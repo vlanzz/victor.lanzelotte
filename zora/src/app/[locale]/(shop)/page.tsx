@@ -1,7 +1,7 @@
 import { Leaf, PackageCheck, Palette, Truck } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { HeroCollage } from '@/components/domain/home/HeroCollage';
-import { Newsletter } from '@/components/domain/home/Newsletter';
+import { LazyNewsletter } from '@/components/domain/home/LazyNewsletter';
 import { ProductShelf } from '@/components/domain/home/ProductShelf';
 import { ButtonLink } from '@/components/ui/Button';
 import { arts } from '@/data/arts';
@@ -55,7 +55,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </ul>
       </section>
 
-      <section className="container-page mt-20" aria-labelledby="categories">
+      <section className="container-page lazy-section mt-20" aria-labelledby="categories">
         <h2 id="categories" className="text-3xl md:text-4xl">{t('categoriesTitle')}</h2>
         <ul className="mt-6 flex flex-wrap gap-3">
           {categories.map((c) => (
@@ -74,7 +74,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <ProductShelf kind="featured" />
       </section>
 
-      <section className="mt-20 bg-paper-2 py-16" aria-labelledby="trust">
+      <section className="lazy-section mt-20 bg-paper-2 py-16" aria-labelledby="trust">
         <div className="container-page">
           <h2 id="trust" className="max-w-xl text-3xl md:text-4xl">{t('trustTitle')}</h2>
           <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -97,7 +97,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <ProductShelf kind="new" />
       </section>
 
-      <div className="mt-20"><Newsletter /></div>
+      <div className="mt-20"><LazyNewsletter /></div>
     </>
   );
 }

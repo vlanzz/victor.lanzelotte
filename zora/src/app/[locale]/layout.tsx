@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { CatalogProvider } from '@/components/providers/CatalogProvider';
 import { StoreHydrator } from '@/components/providers/StoreHydrator';
 import { ToastViewport } from '@/components/ui/ToastViewport';
+import { figtree, fraunces } from '@/lib/fonts';
 import { resolveLocale } from '@/i18n/params';
 import { routing } from '@/i18n/routing';
 import '@/styles/globals.css';
@@ -20,10 +21,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
   const locale = await resolveLocale(params);
+  // o painel admin tem o próprio conjunto de textos; não enviamos isso para quem só navega na loja
+  const { admin: _admin, ...messages } = await getMessages();
+  void _admin;
   return (
-    <html lang={locale === 'pt' ? 'pt-BR' : 'en'}>
+    <html lang={locale === 'pt' ? 'pt-BR' : 'en'} className={`${fraunces.variable} ${figtree.variable}`}>
       <body>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
           <CatalogProvider>
             <StoreHydrator />
             {children}

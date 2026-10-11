@@ -42,7 +42,7 @@ export function PreferencesMenu() {
         type="button"
         aria-expanded={open}
         aria-controls={panelId}
-        aria-label={t('header.preferences')}
+        aria-label={`${t('header.preferences')} (${locale.toUpperCase()} · ${currency})`}
         onClick={() => setOpen((o) => !o)}
         className="inline-flex min-h-11 items-center gap-1.5 rounded-full px-3 text-sm font-bold transition hover:bg-paper-2"
       >

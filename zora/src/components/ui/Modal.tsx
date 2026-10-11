@@ -43,7 +43,7 @@ export function Modal({ open, onClose, title, closeLabel, children, variant = 'c
           <h2 className="text-xl">{title}</h2>
           <IconButton label={closeLabel} onClick={onClose}><X aria-hidden size={20} /></IconButton>
         </div>
-        <div className="overflow-y-auto px-5 pt-2 pb-6">{children}</div>
+        <div className="overflow-y-auto px-5 pt-2 pb-6">{open ? children : null}</div>
       </div>
     </dialog>
   );

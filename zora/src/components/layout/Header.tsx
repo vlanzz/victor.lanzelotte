@@ -41,7 +41,7 @@ export function Header() {
       </div>
       <div className="container-page flex items-center gap-2 py-2 md:gap-4">
         <IconButton label={t('header.openMenu')} className="lg:hidden" onClick={() => setMenu(true)}><Menu aria-hidden /></IconButton>
-        <Link href="/" aria-label="Zora" className="mr-1 shrink-0"><Logo /></Link>
+        <Link href="/" className="mr-1 shrink-0"><Logo /></Link>
         <nav aria-label={t('nav.main')} className="hidden items-center lg:flex">
           <MegaMenu />
           <Link href="/search?sort=newest" className="inline-flex min-h-11 items-center rounded-full px-4 font-semibold transition hover:bg-paper-2">{t('nav.newArrivals')}</Link>

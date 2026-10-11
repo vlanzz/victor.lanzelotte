@@ -2,8 +2,9 @@
 export function Logo({ className = '' }: { className?: string }) {
   return (
     <span
-      className={`font-display inline-flex items-baseline text-3xl font-semibold tracking-tight text-ink ${className}`}
+      role="img"
       aria-label="Zora"
+      className={`font-display inline-flex items-baseline text-3xl font-semibold tracking-tight text-ink ${className}`}
     >
       <span aria-hidden>z</span>
       <svg aria-hidden viewBox="0 0 24 24" className="mx-px h-[0.78em] w-[0.78em] translate-y-[0.04em]">
