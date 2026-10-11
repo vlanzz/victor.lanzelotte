@@ -55,6 +55,8 @@ export interface PaymentRequest {
   currency: Currency;
   method: 'card' | 'pix';
   email: string;
+  /** Só para o cartão (nunca é guardado). */
+  cardNumber?: string;
 }
 export type PaymentResult =
   | { ok: true; reference: string; pixCode?: string }
