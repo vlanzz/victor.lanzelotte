@@ -1,0 +1,177 @@
+{
+  "pages": {
+    "breadcrumb": "Zora",
+    "about": {
+      "title": "Sobre a Zora",
+      "intro": "A Zora nasceu de uma ideia simples: o dia fica melhor quando as coisas ao nosso redor têm história, cor e um pouco de luz.",
+      "sections": [
+        {
+          "h": "Arte primeiro",
+          "p": "Toda ilustração da Zora é autoral, criada para o nosso catálogo. Não usamos bancos de imagem nem reproduzimos arte de terceiros. Cada coleção — dos pets às paisagens de cidade — nasce de um tema e de muito rascunho."
+        },
+        {
+          "h": "Feito sob demanda",
+          "p": "Trabalhamos com parceiros de impressão que produzem cada peça depois do seu pedido. Assim evitamos estoque parado, desperdício e peças que ninguém queria."
+        },
+        {
+          "h": "Para todo tipo de gente",
+          "p": "Gamers, profissionais apaixonados pelo que fazem, quem ama plantas, quem tem gato… Nossas coleções são feitas para que cada pessoa encontre algo que pareça com ela."
+        }
+      ]
+    },
+    "how": {
+      "title": "Como funciona",
+      "intro": "Da prancheta até a sua porta, em quatro passos.",
+      "steps": [
+        {
+          "h": "1. Você escolhe",
+          "p": "Navegue pelas coleções, escolha a arte e o produto, e personalize cor, tamanho ou moldura. O mockup mostra tudo em tempo real."
+        },
+        {
+          "h": "2. A gente confirma",
+          "p": "Depois do pagamento, seu pedido segue direto para a produção. Não há edição de arte por clientes: todas as ilustrações são exclusivas da Zora."
+        },
+        {
+          "h": "3. Produção sob demanda",
+          "p": "Um parceiro de impressão produz a sua peça com impressão em alta definição. A produção leva de 2 a 5 dias úteis."
+        },
+        {
+          "h": "4. Envio e acompanhamento",
+          "p": "Assim que a peça sai da produção, enviamos o código de rastreio. Você acompanha tudo na sua conta."
+        }
+      ],
+      "note": "Este é um protótipo: nenhum pedido é produzido ou enviado de verdade."
+    },
+    "shipping": {
+      "title": "Frete e prazos",
+      "intro": "Enviamos para todo o Brasil e para o exterior. Os valores abaixo são exemplos usados neste protótipo.",
+      "sections": [
+        {
+          "h": "Prazo de produção",
+          "p": "De 2 a 5 dias úteis, contados a partir da confirmação do pagamento."
+        },
+        {
+          "h": "Brasil",
+          "p": "Padrão: R$ 19,90, de 7 a 12 dias úteis. Expresso: R$ 34,90, de 3 a 5 dias úteis. Frete padrão grátis em compras acima de R$ 299."
+        },
+        {
+          "h": "Internacional",
+          "p": "Padrão: US$ 14,00, de 10 a 18 dias úteis. Expresso: US$ 29,00, de 4 a 7 dias úteis. Frete padrão grátis em compras acima de US$ 75. Impostos de importação podem ser cobrados pelo país de destino."
+        },
+        {
+          "h": "Rastreamento",
+          "p": "Você recebe o código de rastreio por e-mail e também o encontra em Minha conta > Meus pedidos."
+        }
+      ]
+    },
+    "returns": {
+      "title": "Trocas e devoluções",
+      "intro": "Sua satisfação vem primeiro. Veja como funciona.",
+      "sections": [
+        {
+          "h": "Produto com defeito ou errado",
+          "p": "Se a peça chegar danificada ou diferente do pedido, enviamos outra sem custo. Basta nos contar em até 30 dias, com uma foto."
+        },
+        {
+          "h": "Arrependimento",
+          "p": "Como cada peça é produzida sob demanda, devoluções por arrependimento seguem o Código de Defesa do Consumidor: você tem 7 dias após o recebimento para desistir da compra."
+        },
+        {
+          "h": "Como solicitar",
+          "p": "Escreva pela página de Contato com o número do pedido. Respondemos em até 2 dias úteis."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "intro": "As dúvidas mais comuns, respondidas.",
+      "items": [
+        {
+          "q": "Posso enviar minha própria imagem?",
+          "a": "Não. Todas as artes são autorais da Zora e não aceitamos envio de imagens de clientes."
+        },
+        {
+          "q": "Quanto tempo leva para chegar?",
+          "a": "A produção leva de 2 a 5 dias úteis, mais o prazo de envio escolhido no checkout."
+        },
+        {
+          "q": "Quais formas de pagamento vocês aceitam?",
+          "a": "Cartão de crédito e Pix. (No protótipo o pagamento é simulado e nada é cobrado.)"
+        },
+        {
+          "q": "Como uso um cupom?",
+          "a": "Digite o código no carrinho e clique em Aplicar. Se o cupom tiver regras (valor mínimo, moeda ou validade), avisamos o motivo caso não possa ser usado."
+        },
+        {
+          "q": "Posso trocar a cor ou o tamanho depois de comprar?",
+          "a": "Como a produção começa logo após o pagamento, alterações só são possíveis nas primeiras horas. Fale com a gente pelo Contato."
+        },
+        {
+          "q": "Vocês enviam para fora do Brasil?",
+          "a": "Sim! Troque o idioma e a moeda no topo da página para ver preços em dólar."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contato",
+      "intro": "Escreva para a gente. Respondemos em até 2 dias úteis.",
+      "name": "Seu nome",
+      "email": "E-mail",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "send": "Enviar mensagem",
+      "sent": "Mensagem recebida! (Simulação: nada foi enviado de verdade.)",
+      "emailLine": "Ou escreva para {email}",
+      "subjects": {
+        "order": "Meu pedido",
+        "product": "Dúvida sobre um produto",
+        "partnership": "Parcerias",
+        "other": "Outro assunto"
+      }
+    },
+    "terms": {
+      "title": "Termos de uso",
+      "intro": "Texto de exemplo para o protótipo. Não tem valor jurídico.",
+      "sections": [
+        {
+          "h": "1. Sobre o serviço",
+          "p": "A Zora vende produtos com ilustrações próprias, produzidos sob demanda por parceiros. Ao usar o site, você concorda com estes termos."
+        },
+        {
+          "h": "2. Compras e pagamentos",
+          "p": "Os preços são exibidos na moeda escolhida e podem mudar sem aviso. O pedido só é confirmado após a aprovação do pagamento."
+        },
+        {
+          "h": "3. Propriedade intelectual",
+          "p": "Todas as ilustrações pertencem à Zora. É proibido copiar ou reproduzir as artes sem autorização."
+        },
+        {
+          "h": "4. Alterações",
+          "p": "Podemos atualizar estes termos a qualquer momento. A versão vigente fica sempre disponível nesta página."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Política de privacidade",
+      "intro": "Texto de exemplo para o protótipo. Não tem valor jurídico.",
+      "sections": [
+        {
+          "h": "Quais dados usamos",
+          "p": "Nome, e-mail, endereço e informações do pedido, apenas para processar sua compra e atendê-lo(a). Neste protótipo, tudo fica salvo apenas no seu navegador."
+        },
+        {
+          "h": "Como protegemos",
+          "p": "Em um site real usaríamos conexão segura e provedores de pagamento certificados. Dados de cartão nunca passam pelos nossos servidores."
+        },
+        {
+          "h": "Seus direitos",
+          "p": "Você pode pedir acesso, correção ou exclusão dos seus dados a qualquer momento, pela página de Contato."
+        },
+        {
+          "h": "Cookies e armazenamento",
+          "p": "Usamos o armazenamento do navegador para lembrar idioma, moeda, carrinho e favoritos."
+        }
+      ]
+    }
+  }
+}

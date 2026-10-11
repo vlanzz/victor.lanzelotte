@@ -1,4 +1,5 @@
 import core from './core.json';
+import pages from './pages.json';
 import admin from './admin.json';
 import account from './account.json';
 import cart from './cart.json';
@@ -7,5 +8,5 @@ import home from './home.json';
 import shop from './shop.json';
 
 /** Cada arquivo é um conjunto de namespaces. Para adicionar um grupo de textos: crie o JSON e inclua aqui. */
-const messages = { ...core, ...shop, ...home, ...product, ...cart, ...account, ...admin };
+const messages = { ...core, ...shop, ...home, ...product, ...cart, ...account, ...admin, ...pages };
 export default messages;
