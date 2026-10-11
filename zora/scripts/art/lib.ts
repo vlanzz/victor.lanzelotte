@@ -54,4 +54,4 @@ export const wave = (y: number, amp: number, len: number, W: number, fill: strin
 };
 
 export const svg = (W: number, H: number, bg: string, body: string, title: string) =>
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${title}"><rect width="${W}" height="${H}" fill="${bg}"/>${body}</svg>\n`;
+  `<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${title}"><rect width="${W}" height="${H}" fill="${bg}"/>${body}</svg>\n`;
