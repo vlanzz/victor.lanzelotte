@@ -1,4 +1,5 @@
 'use client';
+import { newId } from '@/lib/id';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Check, CreditCard, Landmark } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
@@ -74,7 +75,7 @@ export function CheckoutFlow() {
       setPayError(pay.error === 'card_declined' ? t('payment.declined') : t('payment.unknown'));
       return;
     }
-    const addr: Address = { id: `adr-${Date.now().toString(36)}`, label: 'Entrega', name: address.name, line1: address.line1, ...(address.line2 ? { line2: address.line2 } : {}), city: address.city, state: address.state, postalCode: address.postalCode, country: address.country };
+    const addr: Address = { id: newId('adr'), label: 'Entrega', name: address.name, line1: address.line1, ...(address.line2 ? { line2: address.line2 } : {}), city: address.city, state: address.state, postalCode: address.postalCode, country: address.country };
     const order = await orderRepo.create({
       customerId: customer?.id ?? null, email: effectiveEmail, currency, locale, lines: toOrderLines(priced),
       subtotal: totals.subtotal, discount: totals.discount, shipping: totals.shipping, total: totals.total, ...(coupon ? { couponCode: coupon.code } : {}),
