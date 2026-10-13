@@ -1,0 +1,84 @@
+{
+  "wishlist": {
+    "title": "Wishlist",
+    "text": "The items you saved for later.",
+    "emptyTitle": "Nothing saved yet",
+    "emptyText": "Tap the heart on any product to keep it here.",
+    "browse": "Browse products",
+    "count": "{count, plural, one {# item} other {# items}}"
+  },
+  "auth": {
+    "loginTitle": "Sign in to your account",
+    "registerTitle": "Create account",
+    "forgotTitle": "Reset password",
+    "email": "Email",
+    "password": "Password",
+    "name": "Full name",
+    "confirm": "Confirm password",
+    "login": "Sign in",
+    "register": "Create account",
+    "send": "Send instructions",
+    "forgot": "Forgot my password",
+    "noAccount": "Don’t have an account yet?",
+    "haveAccount": "Already have an account?",
+    "backToLogin": "Back to sign in",
+    "invalid": "Incorrect email or password.",
+    "emailTaken": "An account with this email already exists.",
+    "demoTitle": "Demo access",
+    "demoCustomer": "Sign in as demo customer",
+    "demoAdmin": "Sign in as demo admin",
+    "demoHint": "This prototype has no real login. Demo access lets you browse the account and the admin panel.",
+    "forgotText": "Enter your account email. On a real site we’d send a link to create a new password.",
+    "forgotSent": "Done! If an account exists for this email, we sent the recovery link. (Simulation: no email was sent.)",
+    "terms": "I have read and accept the Terms and Privacy Policy"
+  },
+  "account": {
+    "title": "My account",
+    "hello": "Hi, {name}!",
+    "nav": {
+      "profile": "Profile",
+      "addresses": "Addresses",
+      "orders": "My orders",
+      "wishlist": "Wishlist",
+      "logout": "Sign out",
+      "admin": "Admin panel"
+    },
+    "navLabel": "Account menu",
+    "profile": {
+      "title": "Your details",
+      "saved": "Details updated!",
+      "since": "Customer since {date}"
+    },
+    "addresses": {
+      "title": "Addresses",
+      "empty": "You haven’t saved any address yet.",
+      "add": "Add address",
+      "edit": "Edit address",
+      "label": "Nickname (e.g. Home)",
+      "name": "Recipient name",
+      "line1": "Address and number",
+      "line2": "Apartment, suite",
+      "city": "City",
+      "state": "State",
+      "postalCode": "Postal code",
+      "country": "Country (code, e.g. US)",
+      "saved": "Address saved!",
+      "deleted": "Address removed.",
+      "confirmDelete": "Remove this address?"
+    },
+    "orders": {
+      "title": "My orders",
+      "empty": "You haven’t placed any orders yet.",
+      "emptyText": "When you buy, your orders show up here.",
+      "number": "Order {number}",
+      "date": "Placed on {date}",
+      "items": "{count, plural, one {# item} other {# items}}",
+      "view": "View details",
+      "back": "Back to orders",
+      "timeline": "Tracking",
+      "notFound": "Order not found"
+    },
+    "guardTitle": "Sign in to see your account",
+    "guardText": "Log in to access your orders, addresses and wishlist."
+  }
+}

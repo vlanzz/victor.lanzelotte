@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "title": "Zora — ilustrações que acordam o seu dia",
+    "description": "Canecas, pôsteres, cadernos e mais, com ilustrações autorais da Zora. Feito sob demanda."
+  },
+  "common": {
+    "close": "Fechar",
+    "loading": "Carregando…",
+    "error": "Algo deu errado",
+    "retry": "Tentar de novo",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "back": "Voltar",
+    "next": "Continuar",
+    "yes": "Sim",
+    "no": "Não",
+    "from": "a partir de",
+    "all": "Todos",
+    "skipToContent": "Pular para o conteúdo",
+    "currencyBRL": "Real (R$)",
+    "currencyUSD": "Dólar (US$)",
+    "language": "Idioma",
+    "currency": "Moeda",
+    "demoNotice": "Protótipo com dados fictícios. Nenhuma compra é real."
+  },
+  "nav": {
+    "explore": "Explorar",
+    "categories": "Categorias",
+    "niches": "Coleções",
+    "allProducts": "Todos os produtos",
+    "howItWorks": "Como funciona",
+    "about": "Sobre a Zora",
+    "menu": "Menu",
+    "main": "Principal",
+    "breadcrumbs": "Você está aqui",
+    "home": "Início",
+    "search": "Buscar",
+    "wishlist": "Favoritos",
+    "account": "Minha conta",
+    "cart": "Carrinho",
+    "login": "Entrar",
+    "newArrivals": "Lançamentos",
+    "bestsellers": "Destaques"
+  },
+  "header": {
+    "freeShipping": "Frete grátis em compras acima de {amount}",
+    "searchPlaceholder": "Busque por caneca, gato, pôster…",
+    "searchLabel": "Buscar produtos",
+    "suggestions": "Sugestões de busca",
+    "seeAll": "Ver todos os resultados para “{q}”",
+    "cartItems": "{count, plural, =0 {Carrinho vazio} one {Carrinho: 1 item} other {Carrinho: # itens}}",
+    "wishlistItems": "{count, plural, =0 {Favoritos} one {Favoritos: 1 item} other {Favoritos: # itens}}",
+    "preferences": "Idioma e moeda",
+    "openMenu": "Abrir menu",
+    "inCategory": "em {name}",
+    "collection": "Coleção",
+    "category": "Categoria",
+    "product": "Produto"
+  },
+  "footer": {
+    "tagline": "Ilustrações autorais aplicadas a coisas do dia a dia. Feito sob demanda, só para você.",
+    "shop": "Loja",
+    "help": "Ajuda",
+    "company": "Zora",
+    "shipping": "Frete e prazos",
+    "returns": "Trocas e devoluções",
+    "faq": "Perguntas frequentes",
+    "contact": "Contato",
+    "terms": "Termos de uso",
+    "privacy": "Privacidade",
+    "rights": "© {year} Zora. Todos os direitos reservados.",
+    "admin": "Painel admin"
+  },
+  "errors": {
+    "notFoundTitle": "Essa página ainda não amanheceu",
+    "notFoundText": "Não encontramos o que você procurava. Que tal voltar ao início e explorar as coleções?",
+    "goHome": "Voltar ao início",
+    "genericTitle": "Opa, algo deu errado",
+    "genericText": "Tivemos um tropeço por aqui. Tente de novo; se continuar, fale com a gente."
+  }
+}
